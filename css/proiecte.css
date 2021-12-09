@@ -1,0 +1,85 @@
+.proiecte {
+  min-height: 40vh;
+  background-color: var(--color-white);
+  padding-bottom: 5rem;
+}
+
+.proiecte h1 {
+  text-align: center;
+  padding-top: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+
+.proiecte h1::after {
+  position: absolute;
+  content: "";
+  background-color: var(--color-yellow);
+  height: 3px;
+  bottom: -3px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 5%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.projects .project h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-yellow);
+}
+
+.projects .project span {
+  margin-top: -10px;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 800px) {
+  .projects .project h4 {
+    font-size: 15px;
+  }
+
+  .projects .project span {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .project {
+    padding-top: 1rem;
+  }
+
+  .projects .project span {
+    padding-top: 0px;
+  }
+}
+
+
+@media (max-width: 400px) {
+    .projects .project h4 {
+        font-size: 15px;
+      }
+    
+      .projects .project span {
+        font-size: 3rem;
+      }
+}

@@ -1,0 +1,89 @@
+.services {
+  min-height: 50vh;
+  background-color: #fff;
+}
+
+.services .title {
+  text-align: center;
+  padding-top: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  background-color: var(--color-yellow);
+  height: 3px;
+  bottom: -3px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 5%;
+  /* width: 20%; */
+}
+
+.features {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 2.5rem; */
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.features .serviciu .img i {
+  font-size: 40px;
+  background-color: #dbdbdb;
+  padding: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--color-yellow);
+}
+
+.features .serviciu .text h1 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.features .serviciu .text p {
+  padding-top: 1rem;
+}
+
+.features .serviciu .img i:hover {
+  font-size: 40px;
+  background-color: var(--color-yellow);
+  padding: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--color-white);
+  transition: 0.3s ease-in all;
+}
+
+@media (max-width: 1000px) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+  }
+
+  .features .serviciu {
+    margin-top: 1rem;
+}
+}
+
+@media (max-width: 700px) {
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      flex-wrap: wrap;
+    }
+
+    .features .serviciu {
+        margin-top: 1rem;
+    }
+  }
+  
