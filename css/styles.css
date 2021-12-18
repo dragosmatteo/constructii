@@ -18,10 +18,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: var(--fo-nt);
   overflow-x: hidden;
 }

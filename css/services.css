@@ -71,19 +71,19 @@
   }
 
   .features .serviciu {
-    margin-top: 1rem;
-}
+    padding-top: 1rem;
+  }
 }
 
 @media (max-width: 700px) {
-    .features {
-      display: grid;
-      grid-template-columns: 1fr;
-      flex-wrap: wrap;
-    }
-
-    .features .serviciu {
-        margin-top: 1rem;
-    }
+  .features {
+    margin-top: -5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
   }
-  
+
+  .features .serviciu {
+    padding-top: 0.5rem;
+  }
+}
