@@ -27,14 +27,3 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("sticky");
   }
 });
-
-function counter(){
-    let count = setInterval(function(){
-        let c =  document.getElementById("counter"),
-        int = parseInt(c.textContent);
-        c.textContent = (++int).toString();
-        if(int == 134){
-            clearInterval(count)
-        }
-    }, 10)
-}
