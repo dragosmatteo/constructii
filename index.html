@@ -14,7 +14,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -35,7 +34,6 @@
     />
     <title>Firma de constructii</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="/js/app.js" defer></script>
   </head>
   <body>
     
@@ -252,9 +250,50 @@
         <i class="fas fa-arrow-up"></i>
       </button>
     </div>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   
     <script>
-      AOS.init();
-    </script> -->
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-list");
+      const links = document.querySelectorAll(".nav-link");
+      const nav = document.querySelector(".nav-container");
+      const button = document.querySelector('.up');
+
+// !! Hamburger Toggle
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+
+  links.forEach((link) => {
+    link.addEventListener('click', function() {
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+    })
+  });
+});
+
+// !! Sticky navigation
+const initialCoordinast = nav.offsetTop;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > initialCoordinast) {
+    nav.classList.add("sticky");
+    nav.style.opacity = 1
+  } else {
+    nav.classList.remove("sticky");
+  }
+});
+
+
+// Button
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    button.classList.add("active");
+  } else {
+    button.classList.remove("active");
+  }
+})
+    </script>
+
   </body>
 </html>
